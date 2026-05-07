@@ -89,7 +89,7 @@
 				AA0000000000000000000047 /* Frameworks */,
 				AA0000000000000000000004 /* Products */,
 			);
-			path = SpaceTitan;
+			name = SpaceTitan;
 			sourceTree = "<group>";
 		};
 		AA0000000000000000000004 /* Products */ = {
@@ -405,7 +405,7 @@
 				CODE_SIGNING_REQUIRED = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "SpaceTitan/Resources/Info.plist";
+				INFOPLIST_FILE = "Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -430,7 +430,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "SpaceTitan/Resources/Info.plist";
+				INFOPLIST_FILE = "Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
