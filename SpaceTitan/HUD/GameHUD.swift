@@ -1,7 +1,6 @@
 import SwiftUI
 import Combine
 
-@MainActor
 class GameHUDViewModel: ObservableObject {
     @Published var score: Int = 0
     @Published var lives: Int = 3
