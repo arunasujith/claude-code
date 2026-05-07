@@ -7,6 +7,7 @@ class SpawnSystem {
     private let positionDistX: GKRandomDistribution
     private let positionDistY: GKRandomDistribution
     private let tierDist: GKRandomDistribution
+    private let durationJitterDist: GKRandomDistribution
 
     private let sceneSize: CGSize
     private let margin: CGFloat = 70
@@ -20,6 +21,7 @@ class SpawnSystem {
         positionDistX = GKRandomDistribution(lowestValue: m, highestValue: max(m + 1, w - m))
         positionDistY = GKGaussianDistribution(lowestValue: m, highestValue: max(m + 1, h - m))
         tierDist = GKRandomDistribution(lowestValue: 1, highestValue: 10)
+        durationJitterDist = GKRandomDistribution(lowestValue: 90, highestValue: 110)
     }
 
     // MARK: - Control
@@ -51,10 +53,11 @@ class SpawnSystem {
         }
 
         let tier = selectTier(level: scene.difficultyManager.currentLevel)
-        let duration = params.countdownDuration * Double.random(in: 0.9...1.1)
+        let jitter = Double(durationJitterDist.nextInt()) / 100.0
+        let duration = params.countdownDuration * jitter
         let ship = SpaceshipNode(tier: tier,
                                  countdownDuration: duration,
-                                 speedMultiplier: params.speedMultiplier)
+                                 speedMultiplier: CGFloat(params.speedMultiplier))
 
         let x = CGFloat(positionDistX.nextInt())
         let y = CGFloat(positionDistY.nextInt())

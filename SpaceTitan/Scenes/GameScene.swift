@@ -19,7 +19,7 @@ class GameScene: SKScene {
     // MARK: - Game State
     weak var parentViewController: UIViewController?
     private(set) var lives: Int = 3
-    private(set) var activeShips: Set<SpaceshipNode> = []
+    var activeShips: Set<SpaceshipNode> = []
 
     // Wave tracking
     var waveShipsTotal: Int = 0

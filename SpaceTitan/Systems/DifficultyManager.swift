@@ -4,7 +4,7 @@ struct DifficultyParameters {
     let maxShipsOnScreen: Int
     let countdownDuration: TimeInterval
     let spawnInterval: TimeInterval
-    let speedMultiplier: CGFloat
+    let speedMultiplier: Double
     let shipsPerWave: Int
     let pointsPerShip: Int
 }
