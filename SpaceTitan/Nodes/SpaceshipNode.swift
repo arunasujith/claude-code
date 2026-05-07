@@ -218,9 +218,3 @@ class SpaceshipNode: SKNode {
         return label
     }
 }
-
-// MARK: - Hashable (required for Set<SpaceshipNode>)
-extension SpaceshipNode: Hashable {
-    static func == (lhs: SpaceshipNode, rhs: SpaceshipNode) -> Bool { lhs === rhs }
-    func hash(into hasher: inout Hasher) { hasher.combine(ObjectIdentifier(self)) }
-}
